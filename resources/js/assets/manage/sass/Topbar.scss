@@ -1,0 +1,53 @@
+@import "./variables.scss";
+
+/********************************
+TOP BAR
+********************************/
+.g-topbar {
+    width: $max;
+    height: auto;
+    background-color: $drkBlue;
+    .g-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 70px !important;
+    }
+}
+
+.g-topbar-brand {
+    width: 1.825%;
+    height: auto;
+    margin: 0 !important;
+}
+
+.g-topbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 14%;
+    height: auto;
+
+    a {
+        display: block;
+        text-decoration: none;
+    }
+}
+
+.g-topbar-profile {
+    position: relative;
+    color: $grey;
+    cursor: pointer;
+    border-radius: 100%;
+    background: {
+        position: bottom center;
+        repeat: no-repeat;
+        size: cover;
+    }
+
+    img {
+        width: 39px;
+        height: 39px;
+        border-radius: 100%;
+    }
+}

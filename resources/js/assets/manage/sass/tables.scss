@@ -1,0 +1,137 @@
+@import "./variables.scss";
+@import "../../mixins/patterns.scss";
+
+/********************************
+TABLE
+********************************/
+.table tr th {
+    border: none;
+}
+
+.g-table {
+    td {
+        vertical-align: middle;
+    }
+
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        img {
+            width: 52px;
+            height: auto;
+            margin-right: $m2 * 1.5;
+            border-radius: 2px;
+        }
+
+        span {
+            color: #454f5c;
+            font-size: 1.35rem;
+            letter-spacing: $ls1 * 1.5;
+        }
+
+    }
+
+    .manage {
+        position: relative;
+        i {
+            color: rgba(181, 181, 195, 0.9);
+            font-size: 2.25rem;
+            cursor: pointer;
+        }
+    }
+}
+
+.g-table-row {
+    th {
+        padding: 0.95rem;
+        color: $midGrey;
+        font-size: 1.35rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: $ls1 * 1.25;
+        border: none;
+    }
+
+    td {
+        padding: 1.3rem;
+        color: #454f5c;
+        font-size: 1.35rem;
+        letter-spacing: $ls1 * 1.5;
+        border-color: rgba(221, 227, 232, 0.75);
+
+        button {
+            outline: 0;
+        }
+
+        .btn-light {
+            background-color: $drkWhite;
+            border-color: $drkWhite;
+        }
+    }
+}
+
+/********************************
+TABLE BORDERLESS
+********************************/
+.table-borderless {
+    overflow-y: auto;
+    table-layout: fixed;
+    border-collapse: collapse;
+
+    th {
+        padding: 0 0 $m1 * 1.65 0 !important;
+        background-color: $white;
+        color: #000000;
+        font-family: $fontA;
+        font-size: 1.575rem;
+        font-weight: 700;
+        z-index: 99;
+    }
+
+    tbody td {
+        padding: $m3 0 $m1 * 1.65 0 !important;
+        &:last-of-type {
+            text-align: right;
+        }
+    }
+
+    tbody {
+        overflow: auto !important;
+        position: relative;
+        z-index: 9;
+    }
+    tbody td {
+        padding: $m2 * 0.95 0 $m1 * 1.75 0 !important;
+        color: #212020;
+        font-family: $fontA;
+        font-size: 1.4rem;
+        font-weight: 400;
+        letter-spacing: $ls2 * 1.2;
+        border-top: 0.21rem solid rgba(221, 221, 221, 0.525);
+
+        h6 {
+            margin-bottom: $m * 0.7;
+            font-size: 1.275rem;
+            letter-spacing: $ls2;
+        }
+
+        .form-control {
+            padding-top: $m;
+        }
+    }
+
+    &.table-total {
+        width: $max;
+    }
+
+    .s-totals {
+        width: 100%;
+
+        td {
+            border-color: transparent;
+        }
+    }
+}
+

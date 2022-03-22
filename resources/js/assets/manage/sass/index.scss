@@ -1,0 +1,650 @@
+@import "variables";
+@import "../../mixins/patterns.scss";
+@import "../../utilities/icon-fonts.css";
+
+/********************************
+GLOBALS
+********************************/
+html {
+    width: $max;
+    height: $max;
+    font-size: 62.5%;
+}
+
+body {
+    position: relative;
+    width: $max;
+    height: $max;
+    padding: 0;
+    background-color: $drkWhite;
+    font-family: $fontA;
+    font-size: 1.4rem;
+    z-index: -1;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.App {
+    width: $max;
+    height: 100vh;
+}
+
+/********************************
+COMMONS
+********************************/
+.blue {
+    background-color: $blue;
+}
+
+.orange {
+    background-color: $orange;
+}
+
+.primary {
+    background-color: $primary;
+}
+
+.secondary {
+    background-color: $secondary;
+}
+
+.success {
+    background-color: $success;
+}
+
+.danger {
+    background-color: $danger;
+}
+
+.warning {
+    background-color: $warning;
+}
+
+.info {
+    background-color: $info;
+}
+
+.light {
+    background-color: $light;
+}
+
+.dark {
+    background-color: $dark;
+}
+
+// Useful Colors
+.v-blue {
+    color: $vBlue;
+}
+
+.secondary {
+    color: $secondary;
+}
+
+.success {
+    color: $success;
+}
+
+.danger {
+    color: $danger;
+}
+
+.warning {
+    color: $warning;
+}
+
+.info {
+    color: $info;
+}
+
+.light {
+    color: $light;
+}
+
+// Useful Backgrounds
+.v-blue-bg {
+    color: $vBlue;
+}
+
+.secondary-bg {
+    background-color: $secondary;
+}
+
+.success-bg {
+    background-color: $success;
+}
+
+.danger-bg {
+    background-color: $danger;
+}
+
+.warning-bg {
+    background-color: $warning;
+}
+
+.info-bg {
+    background-color: $info;
+}
+
+.light-bg {
+    background-color: $light;
+}
+
+a.txt-primary {
+    color: $primary;
+    &:hover {
+        color: #335895;
+    }
+}
+
+.txt-primary {
+    color: $primary;
+}
+
+.txt-secondary,
+a.txt-secondary {
+    color: $secondary;
+    &:hover {
+        color: #656567;
+    }
+}
+
+.txt-success,
+a.txt-success {
+    color: $success;
+    &:hover {
+        color: #4e8c34;
+    }
+}
+
+a.txt-danger {
+    color: $danger;
+    &:hover {
+        color: #d1192b;
+    }
+}
+
+.txt-danger {
+    color: $danger;
+}
+
+.txt-warning,
+a.txt-warning {
+    color: $warning;
+    &:hover {
+        color: #c7ac24;
+    }
+}
+
+.txt-info,
+a.txt-info {
+    color: $info;
+    &:hover {
+        color: #048b7f;
+    }
+}
+
+.light,
+a.light {
+    background-color: $light;
+    &:hover {
+        color: #c2c5c9;
+    }
+}
+
+.dark,
+a.dark {
+    background-color: $dark;
+    &:hover {
+        color: #141517;
+    }
+}
+
+.alert-primary {
+    color: $primary;
+}
+
+.alert-secondary {
+    color: $secondary;
+}
+
+.alert-success {
+    color: $midBlue;
+}
+
+.alert-danger {
+    background-color: #f7e4e5;
+    color: $danger;
+}
+
+.alert-warning {
+    color: $warning;
+}
+
+.alert-info {
+    color: $info;
+}
+
+.alert-dark {
+    color: $dark;
+}
+
+.border-primary {
+    border-color: $primary !important;
+}
+
+.border-secondary {
+    border-color: $secondary !important;
+}
+
+.border-success {
+    border-color: $success !important;
+}
+
+.border-danger {
+    border-color: $danger !important;
+}
+
+.border-warning {
+    border-color: $warning !important;
+}
+
+.border-info {
+    border-color: $info !important;
+}
+
+.border-dark {
+    border-color: $dark !important;
+}
+
+.brick {
+    //color: #bd7c4b;
+    color: rgba(189, 124, 75, 0.55);
+}
+
+.green {
+    //color: #57a567;
+    color: rgba(87, 165, 103, 0.55);
+}
+
+.red {
+    //color: #f44335;
+    color: rgba(244, 67, 53, 0.55);
+
+}
+
+.blueish {
+    //color: #085fa7;
+    color: rgba(8, 95, 167, 0.55);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $fontA;
+    font-weight: 600;
+}
+
+h1 {
+    margin-bottom: $m2 * 1.05;
+    font-size: 3.6rem;
+    letter-spacing: $ls1 * 1.25;
+}
+
+h2 {
+    margin-bottom: $m2 * 1.05;
+    font-size: 2.9rem;
+    letter-spacing: $ls1 * 1.05;
+}
+
+h3 {
+    margin-bottom: $m2;
+    font-size: 2.55rem;
+    letter-spacing: $ls1 * 0.85;
+}
+
+h4 {
+    margin-bottom: $m2;
+    font-size: 2rem;
+    letter-spacing: $ls1 * 0.85;
+}
+
+h5 {
+    margin-bottom: $m1 * 0.75;
+    font-size: 1.8rem;
+    letter-spacing: $ls1 * 0.6;
+}
+
+h6 {
+    margin-bottom: $m * 0.05;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: $ls2 * 0.7;
+}
+
+p {
+    font-family: $fontA;
+    font-weight: 300;
+}
+
+.g-paragraph-1 {
+    font-size: 1.575rem;
+    line-height: 25px;
+    letter-spacing: $ls2 * 1.25;
+}
+
+.g-paragraph-p2 {
+    font-size: 1.5rem;
+    line-height: 23px;
+    letter-spacing: $ls2 * 1.05;
+}
+
+.g-paragraph-p3 {
+    font-size: 1.15rem;
+    line-height: 17px;
+    letter-spacing: $ls2;
+}
+
+.g-paragraph-p4 {
+    font-size: 1.05rem;
+    line-height: 14px;
+    letter-spacing: $ls1 * 1.75;
+}
+
+.lg-img {
+    width: 23%;
+}
+
+/********************************
+WRAPPERS
+********************************/
+.g-wrapper {
+    @include wrap;
+}
+
+#s-uploads-wrapper,
+#s-photos-wrapper,
+#preview-images {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+/********************************
+MAIN CONTENT
+********************************/
+.g-main-content {
+    @include wrap;
+    position: relative;
+    min-height: 300px;
+    padding: 150px 0 $m10 0;
+    z-index: 9;
+}
+
+/********************************
+BREADCRUMBS BAR
+********************************/
+.g-breadcrumbs-bar {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    width: $max;
+    height: auto;
+    margin-bottom: 12px;
+    padding: 0;
+
+    .action {
+        justify-content: space-between;
+    }
+
+    .breadcrumb {
+        padding: 0;
+        font-size: 1.55rem;
+
+        a {
+            color: $ltBlue;
+        }
+    }
+}
+
+/********************************
+CONTENT
+********************************/
+.g-content {
+    width: $max;
+    height: auto;
+}
+
+/********************************
+CARDS
+********************************/
+.card {
+    @include box;
+    @include flex1;
+    border: none;
+
+    &.sm-card {
+        padding-bottom: 14px;
+    }
+}
+
+.card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: .75rem 0;
+    background-color: transparent;
+
+    h4 {
+        @include heading2;
+        margin-bottom: $m * 1.5;
+        color: $midBlue;
+    }
+
+    span {
+        margin-bottom: $m;
+        color: $ltGrey;
+        font-size: 1.35rem;
+        font-weight: 400 !important;
+        letter-spacing: $ls;
+    }
+    .btn-mini {
+        background-color: #718d9e;
+        color: $white;
+        border-color: #718d9e;
+    }
+}
+
+.card-body {
+    padding: 0;
+}
+
+/********************************
+NOTIFICATIONS
+********************************/
+.g-header-nav-item,
+.g-header-settings,
+.g-profile-alert {
+    position: relative;
+    width: 39px;
+    height: auto;
+    cursor: pointer;
+
+    i {
+        color: $drkWhite;
+        font-size: 2.525rem;
+    }
+
+    span {
+        position: absolute;
+        top: -9px;
+        right: -7px;
+        width: 21px;
+        height: 21px;
+        padding-top: 3px;
+        color: $white;
+        text-align: center;
+        font-family: $fontA;
+        font-size: 1.1rem;
+        font-weight: 400;
+        border-radius: $max;
+    }
+}
+
+.g-header-nav-item,
+.g-header-profile {
+    margin-left: $m5;
+}
+
+.g-header-settings {
+    margin-left: $m4;
+}
+
+/********************************
+TOP BAR
+********************************/
+.topbar {
+    position: fixed;
+    width: $max;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    z-index: 99;
+}
+
+/********************************
+PAGE HEADER
+********************************/
+.g-page-header {
+    width: $max;
+    height: auto;
+    margin: $m3 * 1.25 0 $m2 * 1.35 0;
+    text-align: left;
+
+    &.action {
+        margin: $m3 * 1.75 0 $m2 * 1.35 0;
+        text-align: right;
+    }
+
+    h2 {
+        margin-bottom: $m * 1.25;
+        color: $midBlue;
+        font-family: $fontA;
+        font-size: 3.15rem;
+        font-weight: 400;
+    }
+
+    .g-paragraph-1 {
+        color: $grey;
+    }
+}
+
+/********************************
+MANAGE ITEMS 
+********************************/
+.g-manage-items {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: $max;
+    min-height: 25px;
+    margin-bottom: $m1 * 1.75;
+}
+
+.g-manage-items {
+    .btn-mini {
+        width: 32px;
+        height: 32px;
+        margin-left: $m1 * 1.75;
+        line-height: 26px;
+    }
+}
+
+/********************************
+NAVBAR & TABLES DROPDOWN MENUS
+********************************/
+.g-nav-item-menu,
+.g-header-dropdown,
+.g-row-actions-menu {
+    display: none;
+    position: absolute;
+    height: auto;
+    margin-top: 0 !important;
+    padding: $m * 1.45 0 $m 0;
+    background-color: $white;
+    opacity: 0;
+    z-index: 9;
+    border-radius: 2px;
+    transition: 0.3s cubic-bezier(0.4, 0.25, 0.1, 1);
+
+    a,
+    .btn.btn-link {
+        display: block;
+        width: $max;
+        height: auto;
+        padding: $m * 0.75 $m1 * 1.175;
+        text-decoration: none;
+        color: $grey;
+        text-align: left;
+        font-size: 1.1rem;
+        font-weight: 400;
+        letter-spacing: $ls2;
+        &:hover {
+            background-color: rgba(238, 240, 247, 0.75) !important;
+            color: $ltDark;
+        }
+    }
+}
+
+.g-nav-item-menu {
+    top: 4.6rem;
+    left: 0;
+    width: 114px;
+    padding-left: $m;
+}
+
+.g-header-dropdown {
+    bottom: 0;
+    right: 35px;
+    width: 75px;
+    background-color: green;
+}
+
+.g-row-actions-menu {
+    top: 1.6rem;
+    right: 35px;
+    width: 75px;
+}
+
+.g-nav-item {
+    position: relative;
+
+    &.opened {
+        .g-nav-item-menu {
+            display: block;
+            opacity: 1;
+        }
+    }
+}
+
+.g-profile-header {
+    &.opened {
+        .g-header-dropdown {
+            display: block;
+            opacity: 1;
+        }
+    }
+}
+
+.g-row-item-manager {
+    &.opened {
+        .g-row-actions-menu {
+            display: block;
+            opacity: 1;
+        }
+    }
+}

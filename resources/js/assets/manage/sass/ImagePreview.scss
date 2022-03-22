@@ -1,0 +1,46 @@
+@import "./variables.scss";
+@import "../../mixins/patterns.scss";
+
+/********************************
+IMAGE PREVIEW
+********************************/
+.g-image-preview {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    height: auto;
+    margin: calc($m3 * 1.25) 2.85% 8px 0;
+    cursor: pointer;
+    border-radius: 4px;
+
+    &:nth-of-type(8n) {
+        margin-right: 0;
+    }
+
+    &.lg-img {
+        width: 16%;
+    }
+
+    img {
+        position: relative;
+        width: 100%;
+        height: auto;
+        z-index: 1;
+    }
+
+    .g-manage-photo {
+        top: -13px;
+        right: -11px;
+        line-height: 33px;
+        background-color: #96bad0;
+        color: $white;
+    }
+
+}
+
+.s-portrait {
+    border: 7px solid $white;
+    border-radius: 5px;
+}

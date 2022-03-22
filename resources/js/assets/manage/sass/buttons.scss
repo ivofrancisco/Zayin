@@ -1,0 +1,347 @@
+@import "./variables.scss";
+
+/********************************
+BUTTON'S WRAPPER
+********************************/
+.btn {
+    font-size: 1.45rem;
+    font-weight: 400;
+    border-radius: 0.25rem;
+    transition: all 0.5s ease;
+}
+
+/** SIZES
+********************************/
+.bbs {
+    padding: 0.455rem 1.55rem;
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+.bbm {
+    padding: 0.7rem 2.1rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.bbl {
+    padding: 0.85rem 2.4rem;
+    font-size: 1.675rem;
+    line-height: 1.5;
+}
+
+/** BASIC
+********************************/
+.btn-primary {
+    background-color: $primary;
+    border: 0;
+    &:hover {
+        background-color: #335895;
+        border-color: #335895;
+    }
+}
+
+.btn-secondary {
+    background-color: $secondary;
+    border: 0;
+    &:hover {
+        background-color: #656567;
+        border-color: #656567;
+    }
+}
+
+.btn-success {
+    background-color: $success;
+    border: 0;
+    &:hover {
+        background-color: #4e8c34;
+        border-color: #4e8c34;
+    }
+}
+
+.btn-danger {
+    background-color: $danger;
+    border: 0;
+    &:hover {
+        background-color: #d1192b;
+        border-color: #d1192b;
+    }
+}
+
+.btn-warning {
+    background-color: $warning;
+    color: $dark;
+    border: 0;
+    &:hover {
+        background-color: #c7ac24;
+        color: $white;
+        border-color: #c7ac24;
+    }
+}
+
+.btn-info {
+    background-color: $info;
+    border: 0;
+    &:hover {
+        background-color: #048b7f;
+        border-color: #048b7f;
+    }
+}
+
+.btn-light {
+    background-color: $light;
+    color: $ltDark;
+    border: 0;
+    &:hover {
+        background-color: #c2c5c9;
+        color: $ltDark;
+        border-color: #c2c5c9;
+    }
+}
+
+.btn-dark {
+    background-color: $dark;
+    border-color: $dark;
+    &:hover {
+        background-color: #141517;
+        border-color: #141517;
+    }
+}
+
+/** ROUNDED
+********************************/
+.btn-primary.rnd,
+.btn-secondary.rnd,
+.btn-success.rnd,
+.btn-danger.rnd,
+.btn-info.rnd,
+.btn-dark.rnd {
+    color: $white;
+    border-radius: 25px;
+    border: 0;
+    &:hover {
+        color: $white;
+    }
+}
+
+.btn-warning.rnd,
+.btn-light.rnd {
+    color: $dark;
+    border: 0;
+    border-radius: 25px;
+    &:hover {
+        color: $ltDark;
+    }
+}
+
+/** OUTLINE
+********************************/
+.btn-outline-primary {
+    background-color: transparent;
+    color: $primary;
+    border-color: $primary;
+    &:hover {
+        background-color: $primary;
+        color: $white;
+        border-color: $primary;
+    }
+}
+
+.btn-outline-secondary {
+    background-color: transparent;
+    color: $secondary;
+    border-color: $secondary;
+    &:hover {
+        background-color: $secondary;
+        color: $white;
+        border-color: $secondary;
+    }
+}
+
+.btn-outline-success {
+    background-color: transparent;
+    color: $success;
+    border-color: $success;
+    &:hover {
+        background-color: $success;
+        color: $white;
+        border-color: $success;
+    }
+}
+
+.btn-outline-danger {
+    background-color: transparent;
+    color: $danger;
+    border-color: $danger;
+    &:hover {
+        background-color: $danger;
+        color: $white;
+        border-color: $danger;
+    }
+}
+
+.btn-outline-warning {
+    background-color: transparent;
+    color: $warning;
+    border-color: $warning;
+    &:hover {
+        background-color: $warning;
+        color: $dark;
+        border-color: $warning;
+    }
+}
+
+.btn-outline-info {
+    background-color: transparent;
+    color: $info;
+    border-color: $info;
+    &:hover {
+        background-color: $info;
+        color: $white;
+        border-color: $info;
+    }
+}
+
+.btn-outline-light {
+    background-color: transparent;
+    color: $light;
+    border-color: $light;
+    &:hover {
+        background-color: $light;
+        color: $ltDark;
+        border-color: $light;
+    }
+}
+
+.btn-outline-dark {
+    background-color: transparent;
+    color: $dark;
+    border-color: $dark;
+    &:hover {
+        background-color: $dark;
+        color: $white;
+        border-color: $dark;
+    }
+}
+
+/** MINI
+********************************/
+.btn-mini {
+    width: 36px;
+    height: 36px;
+    line-height: 32px;
+    color: $white;
+    text-align: center;
+    font-size: 1.55rem;
+    &.warning {
+        color: $dark;
+    }
+}
+
+.btn-mini-lg {
+    width: 44px;
+    height: 44px;
+    line-height: 36px;
+    color: $white;
+    text-align: center;
+    font-size: 1.7rem;
+    &.warning {
+        color: $dark;
+    }
+}
+
+.btn-mini,
+.btn-mini-lg {
+    &.primary {
+        &:hover {
+            background-color: #335895;
+            color: $white;
+        }
+    }
+}
+
+.btn-mini,
+.btn-mini-lg {
+    &.secondary {
+        &:hover {
+            background-color: #656567;
+            color: $white;
+        }
+    }
+}
+
+.btn-mini,
+.btn-mini-lg {
+    &.success {
+        &:hover {
+            background-color: #4e8c34;
+            color: $white;
+        }
+    }
+}
+
+.btn-mini,
+.btn-mini-lg {
+    &.danger {
+        &:hover {
+            background-color: #d1192b;
+            color: $white;
+        }
+    }
+}
+
+.btn-mini,
+.btn-mini-lg {
+    &.warning {
+        &:hover {
+            background-color: #c7ac24;
+            color: $white;
+        }
+    }
+}
+
+.btn-mini,
+.btn-mini-lg {
+    &.info {
+        &:hover {
+            background-color: #048b7f;
+            color: $white;
+        }
+    }
+}
+
+.btn-mini,
+.btn-mini-lg {
+    &.light {
+        &:hover {
+            background-color: #c2c5c9;
+            color: $white;
+        }
+    }
+}
+
+.btn-mini,
+.btn-mini-lg {
+    &.dark {
+        &:hover {
+            background-color: #141517;
+            color: $white;
+        }
+    }
+}
+
+/** LINK
+********************************/
+.btn-link.lg {
+    font-size: 1.8rem;
+}
+
+/** ICONED LINK
+********************************/
+.btn-link.icon {
+    overflow: hidden;
+    text-decoration: none;
+    min-width: 17px;
+    height: auto;
+    font-size: 1.6rem;
+}

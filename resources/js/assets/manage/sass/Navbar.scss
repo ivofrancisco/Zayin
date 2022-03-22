@@ -1,0 +1,51 @@
+@import "./variables.scss";
+
+/********************************
+NAVBAR
+********************************/
+.g-navbar {
+    width: $max;
+    height: auto;
+    background-color: $white;
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: $max;
+        height: auto;
+        margin-bottom: 0 !important;
+        padding: 1px 0 0 0;
+    }
+
+    li {
+        list-style: none;
+        height: auto;
+        margin-right: 40px;
+        padding-top: 2px;
+        cursor: pointer;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: $max;
+            height: 40px;
+            text-decoration: none;
+            color: $drkBlue;
+            font-family: $fontA;
+            font-size: 1.45rem;
+            font-weight: 400;
+            letter-spacing: $ls1 * 1.15;
+            border-bottom: 3px solid transparent;
+
+            &:hover,
+            &.active {
+                border-color: $midBlue;
+            }
+        }
+    }
+
+}
+
+

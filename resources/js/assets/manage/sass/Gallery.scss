@@ -1,0 +1,62 @@
+@import "./variables.scss";
+@import "../../mixins/patterns.scss";
+
+.g-gallery {
+    @include box;
+    width: 47.5%;
+    height: auto;
+    margin-bottom: $m8;
+    padding: 0;
+}
+
+.s-glr-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: $max;
+    min-height: 80px;
+    padding: 24px 24px 12px 24px;
+    background-color: transparent;
+}
+
+.s-glr-head-info {
+    width: 67.5%;
+    height: auto;
+
+    h4 {
+        margin-bottom: calc($m * 1.25);
+        color: $drkBlue;
+        font-size: 1.825rem;
+        font-weight: 400;
+    }
+
+    p {
+        color: $ltGrey;
+    }
+}
+
+.s-glr-head-action {
+    width: 20.5%;
+    height: auto;
+    text-align: right;
+
+    .btn-mini {
+        width: 28px;
+        height: 28px;
+        margin-left: calc($m1 * 1.5);
+        padding: calc($m * 0.75) 0 0 0;
+        line-height: 24px;
+        font-size: 1.325rem;
+    }
+}
+
+.s-glr-body {
+    width: $max;
+    min-height: 200px;
+    padding: 0;
+
+    img {
+        width: $max;
+        height: auto;
+    }
+}
